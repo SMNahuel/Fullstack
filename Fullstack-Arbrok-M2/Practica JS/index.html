@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="container_title">SPLI</h1>
+      <h1 class="container_title">TTER</h1>
+      <div class="calculator">
+        <div class="calculator_total">
+          <p class="calculator_total_p">Bill</p>
+          <div class="calculator_total_inpt">
+            <input class="calculator_total_inpt_input" value=0 id="totalAccount" />
+          </div>
+        </div>
+        <div class="calculator_tip">
+          <p class="calculator_tip_p">Select Tip</p>
+          <div class="calculator_tip_cnt_btn">
+            <button
+              onclick="changeSelectBotton(5)"
+              class="calculator_tip_button"
+              id="5"
+            >
+              5%
+            </button>
+            <button
+              onclick="changeSelectBotton(10)"
+              class="calculator_tip_button"
+              id="10"
+            >
+              10%
+            </button>
+            <button
+              onclick="changeSelectBotton(15)"
+              class="calculator_tip_button"
+              id="15"
+            >
+              15%
+            </button>
+            <button
+              onclick="changeSelectBotton(25)"
+              class="calculator_tip_button"
+              id="25"
+            >
+              25%
+            </button>
+            <button
+              onclick="changeSelectBotton(50)"
+              class="calculator_tip_button"
+              id="50"
+            >
+              50%
+            </button>
+            <button
+              onclick="changeSelectBotton()"
+              class="calculator_tip_button_custom"
+            >
+              Custom
+            </button>
+          </div>
+        </div>
+        <div class="calculator_people">
+          <p class="calculator_people_p">Number of People</p>
+          <div class="calculator_total_inpt">
+            <input type="number" onchange="calculatingTip()" value=0 class="calculator_people_input" id="totalPerson" />
+          </div>
+        </div>
+        <div class="calculator_result">
+          <div class="calculator_result_amount">
+            <div class="calculator_result_amount_left">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="calculator_result_amount_right">
+              <p id="totalTipForPerson">$0</p>
+            </div>
+          </div>
+          <div class="calculator_result_total">
+            <div class="calculator_result_total_left">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="calculator_result_total_right">
+              <p id="totalForPerson">$0</p>
+            </div>
+          </div>
+          <button class="calculator_result_reset" onclick="resetCalculator()">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

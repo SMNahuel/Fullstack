@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <style>
+      .containerForm{
+        width: 200vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--     <button class="buttonburger" onclick="mostrarMenu()" id="buttonburger">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8AAAC8vLzt7e2ysrJycnIiIiLHx8fw8PCFhYWamprj4+PBwcHNzc3p6em4uLgvLy9CQkI3Nzd/f39qampvb2+Pj4+ioqLa2tpUVFRKSkr29vYYGBirq6smJiY9PT1hYWEPDw9YWFg1kJmwAAACDklEQVR4nO3d7XbBUBCF4UN8NwhRQqro/V9kiR/VH5pZM5Y5R9/nCvZe0ZzEmqkQAAAAAAAAAAAAAAAAAAAAnqvKu3Eajh5RbzTuRGzRNRece3doszVex413gXZFZik49I4vsbA09A4vM9EX3HtnF9I33HlHFxpqC9Yf3tGF1B/TN+/kUn0a3vP6n9LXv9P8g9Pi9U/8kHuHl1gaCoYw8Y7f7nNmahh63gXabE2vFhdZ6d3hL4e5tV+jmvfilD/kWwwAAAAAAAAAAAAAABCVOovUgwYV8tWn90zJXbu1cVzobBb7fOLaWHDqXaDd0VQwiSlh9YTwxcE7vUiuL5jEykynM9A3PHpnF6rUDQfe0YU22oIz7+RSpbZhEnfSi3dtw9HJO7qQ/tRfekcX0g8Kr72jC9XqhiPv6DKWh5oElhHOTC9RK+/0Avqtp0bfO3+rqa3g+QU47htqX3+X+VFtyn6cxl3zwgwAAAAAAAAAAAAAAMBz1ftjMYjTYWwepgnRT+8V1o7ZwrtCK/UIdKOOeyDqam9pmMLgnmVUP1Te2WW2+oZR/5PkG/oFtsI7ulBPW5B9i2io9y1e/xqGeNdjf1P/HSYw5H2lv5cmch7u1AVTWUA0PNOEOoUT0fboPYt/E9jyGyzNVYz6Bx7P74fGjZmLbPN18u5xR1E+oB8AAAAAAAAAAAAAAAAAAABufQPXyzi7ezBe2AAAAABJRU5ErkJggg=="
+      />
+    </button>
+    <button class="buttonX buttonburger" onclick="mostrarForm()" id="buttonX">
+      <img
+      src="data:image/png;base64,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"
+      />
+    </button> -->
+    <!--       <button class="buttonForm" onclick="manipulandoInputs()">
+            Ejercutar funcion
+          </button>
+          <button class="buttonForm" onclick="cambiarColor()">
+            Cambiar color al cuadrado
+          </button>
+          <button class="buttonForm" onclick="valorDelPrimerInput()">
+            Mostrar el valor del primer input
+          </button> -->
+<!--     <div class="containerForm" id="containerForm">
+      <label>INGRESAR NUEVO AMIGO</label>
+      <input id="amigo" />
+      <button class="btn" id="buttonAdd">Agregar amigo</button>
+    </div>
+    <ul id="listaAmigos"></ul> -->
+    <!-- <div class="containerMenu" id="containerMenu">
+      <button>Home</button>
+      <p>Gallery</p>
+      <p>About</p>
+    </div> -->
+<!--     <button id="elem">Haz click en mí</button>
+
+    <script>
+      class Menu {
+        handleEvent(event) {
+          switch (event.type) {
+            case "mousedown":
+              elem.innerHTML = "Botón del mouse presionado";
+              break;
+            case "mouseup":
+              elem.innerHTML += "...y soltado.";
+              break;
+          }
+        }
+      }
+
+      let menu = new Menu();
+
+      elem.addEventListener("mousedown", menu);
+      elem.addEventListener("mouseup", menu); -->
+      <form method="post" id="myForm">
+        <label>Input generico</label>
+        <input />
+        <button onclick="actionForm(event)">Enviar</button>
+      </form>
+    </script>
+  </body>
+</html>

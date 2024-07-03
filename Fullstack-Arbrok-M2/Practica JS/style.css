@@ -1,0 +1,222 @@
+/*
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+*/
+
+.dsa {
+  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(185, 41%, 84%);
+  background-color: hsl(184, 14%, 56%);
+  background-color: hsl(186, 14%, 43%);
+  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+/* Estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(185, 41%, 84%);
+}
+
+input {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Estilos locales */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container_title {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.calculator {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.calculator_total {
+  padding: 30px;
+}
+.calculator_total_p {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+.calculator_total_inpt {
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px;
+}
+.calculator_total_inpt_input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  background: url("./images/icon-dollar.svg") no-repeat left;
+  background-size: 10px;
+}
+.calculator_tip {
+  padding: 30px;
+}
+
+.calculator_tip_p {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+
+.calculator_tip_cnt_btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.calculator_tip_button {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.calculator_tip_button_custom {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.calculator_people {
+  padding: 30px;
+}
+.calculator_people_p {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+
+.calculator_people_input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  background: url("./images/icon-person.svg") no-repeat left;
+  background-size: 10px;
+}
+
+.calculator_result {
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: hsl(183, 100%, 15%);
+}
+.calculator_result_reset {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.button_select {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+.calculator_result_amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+}
+.calculator_result_amount_tip {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator_result_amount_left {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+}
+.calculator_result_total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+}
+.calculator_result_amount_right{
+  font-size: 25px;
+}
+
+.calculator_result_total_left {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+}
+.calculator_result_total_right {
+  font-size: 25px;
+}

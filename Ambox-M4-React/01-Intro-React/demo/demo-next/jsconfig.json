@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@The /dashboard/settings route is composed of three segments:
+
+      /*": ["./src/*"]
+    }
+  }
+}
